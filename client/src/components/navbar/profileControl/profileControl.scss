@@ -1,0 +1,98 @@
+@import '../../../style.scss';
+
+.profileControl {
+   
+    @include themify($themes) {
+        position: absolute;
+        width: 350px;
+        height: auto;
+        top: 60px;
+        right: 10px;
+        background-color: themed('bg');
+        border-radius: 20px;
+        overflow: hidden;
+        padding: 20px;
+       
+       
+
+        .user {
+            padding: 10px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+            font-size: 18px;
+            cursor: pointer;
+
+            
+
+            img {
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+
+        .user:hover, .seeAllProfile:hover {
+            background-color: themed("bgSoft");
+        }
+
+        .seeAllProfile {
+            padding: 10px;
+            border-radius: 15px;
+            cursor: pointer;
+            p{
+                color: rgb(0, 132, 255);
+            }
+        }
+        .profileControlList {
+            ul {
+                list-style: none;
+                li {
+                    border-radius: 15px;
+                    padding: 10px;
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+                    justify-content: space-between;
+                    cursor: pointer;
+                    div {
+                        display: flex;
+                        gap: 10px;
+                        align-items: center;
+
+                        div {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 35px;
+                            height: 35px;
+                            background-color: themed("bgSoft");
+                            border-radius: 50px;
+                            font-size: 1.4rem;
+                        }
+                        p {
+                            font-size: .9rem;
+                            font-weight: 500;
+                        }
+                    }
+
+                  
+                    
+                }
+                li:hover {
+                    background-color: themed("bgSoft");
+
+                    .left {
+
+                        div {
+                            background-color: themed('bg');
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

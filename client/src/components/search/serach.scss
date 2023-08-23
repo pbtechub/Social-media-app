@@ -1,0 +1,103 @@
+@import '../../style.scss';
+
+.search {
+    @include themify($themes) {
+        width: 100%;
+        height: auto;
+       
+        
+        .serchControl {
+                width: 100%;
+                background-color: themed('bg');
+                border-radius: 10px;
+                overflow: hidden;
+                padding: 20px;
+                max-height: 450px;
+                overflow: scroll;
+                &::-webkit-scrollbar {
+                    display: none;
+                  }
+              
+               
+        
+                .seeAllProfile {
+                    padding: 10px;
+                    border-radius: 15px;
+                    cursor: pointer;
+                    p{
+                        color: rgb(0, 132, 255);
+                    }
+                }
+                .profileControlList {
+                    ul {
+                        list-style: none;
+                        li {
+                            border-radius: 15px;
+                            padding: 10px;
+                            display: flex;
+                            gap: 10px;
+                            align-items: center;
+                            justify-content: space-between;
+                            cursor: pointer;
+                            div {
+                                display: flex;
+                                gap: 20px;
+                                align-items: center;
+        
+                                img {
+                                    width: 40px;
+                                    height: 40px;
+                                    border-radius: 50%;
+                                    object-fit: cover;
+                                  }
+                                  div {
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: flex-start;
+                                    gap: 3px;
+
+                                      p {
+                                          font-size: .9rem;
+                                          font-weight: 500;
+                                      }
+
+                                      .text {
+                                        display: flex;
+                                        flex-direction: row;
+                                        align-items: center;
+                                        gap: 5px;
+
+                                          .dot {
+                                            width: 6px;
+                                            height: 6px;
+                                            border-radius: 50%;
+                                            background-color:  rgb(0, 132, 255);;
+    
+                                          }
+                                          span {
+                                            font-weight: 500;
+                                            font-size: .7rem;
+                                            color:themed("textColorSoft")
+    
+                                          }
+                                      }
+                                  }
+                            }
+        
+                          
+                            
+                        }
+                        li:hover {
+                            background-color: themed("bgSoft");
+        
+                     
+                        }
+                    }
+                }
+            }
+        
+
+    
+    }
+  
+}

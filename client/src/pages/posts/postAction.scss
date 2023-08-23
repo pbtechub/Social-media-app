@@ -1,0 +1,69 @@
+@import '../../style.scss';
+
+.postControl {
+   
+    @include themify($themes) {
+        position: absolute;
+        width: 350px;
+        height: auto;
+        top: 60px;
+        right: 10px;
+        background-color: themed('bgSoft');
+        border-radius: 20px;
+        overflow: hidden;
+        padding: 20px;
+        z-index: 999;
+       
+
+
+
+
+        .postControlList {
+            ul {
+                list-style: none;
+                li {
+                    border-radius: 15px;
+                    padding: 10px;
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+                    justify-content: space-between;
+                    cursor: pointer;
+                    div {
+                        display: flex;
+                        gap: 10px;
+                        align-items: center;
+
+                        div {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 35px;
+                            height: 35px;
+                            background-color: themed("bg");
+                            border-radius: 50px;
+                            font-size: 1.4rem;
+                        }
+                        p {
+                            font-size: .9rem;
+                            font-weight: 500;
+                        }
+                    }
+
+                  
+                    
+                }
+                li:hover {
+                    background-color: themed("bg");
+
+                    .left {
+
+                        div {
+                            background-color: themed('bgSoft');
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
